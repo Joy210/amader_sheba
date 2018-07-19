@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     outline: none;
+    font-family: sans-serif;
 }
 
 .left { float: left; }
@@ -42,10 +43,12 @@
 .top-container .right-side {
     float: right;
 }
+
 .top-container .right-side ul li,  .left-side ul li {
     padding: 0.1rem 0.4rem;
     font-size: 0.9rem;
 }
+
 .top-container .right-side a,  .left-side a {
     color: #ffffff;
     font-size: 0.8rem;
@@ -162,6 +165,7 @@
     width: 90%;
     margin: auto;
 }
+
 .registrationProcess .splitBox {
     display: grid;
     grid-gap: 1rem;
@@ -187,7 +191,6 @@
     margin: auto;
 }
 
-
 .main-content .avator img {
     width: 120px;
     height: 120px;
@@ -203,7 +206,6 @@
     margin-bottom: 0;
     font-size: 30px;
 }
-
 
 .main-content .left-navbar {
     background: #3E4858;
@@ -320,6 +322,7 @@
     font-size: 0.3rem;
     padding-left: 0.5rem;
 }
+
 .user-main-body .editCoverPhoto {
     
 }
@@ -385,12 +388,6 @@
     margin: auto;
 }
 
-/*  */
-
-
-
-
-
 /* footer */
 
 .footer{
@@ -454,12 +451,13 @@
 .user-main-body .nav-tabs a {
     font-size: 1.1rem;
     color: #333333;
-    padding: 0.4rem 1rem;
+    padding: 0.5rem 3rem;
     border: none;
 }
 
-.tab-content {
-    display: grid;
+.tab-content .text-center {
+    width: 80%;
+    margin: auto;
 }
 
 .service_list .row {
@@ -507,3 +505,24 @@
     padding-top: 0.2rem;
     font-size: 0.9rem;
 }
+
+/* UserInfo */
+
+.tab-content form table {
+    width: 80%;
+    margin: auto;
+}
+
+.tab-content form table tr td {
+    padding: 0.5rem 0;
+}
+.tab-content form table h5 {
+    font-size: 1rem;
+    color: crimson;
+    font-weight: bold;
+}
+
+.saveBtn .btn{
+    width: 120px;
+}
+

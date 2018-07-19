@@ -59,8 +59,7 @@
                 </div>
             </div>
         </div>
-        
-
+   
         <div class="top-container-fluid">
             <div class="container top-content">
                 <div class="brand">
@@ -78,19 +77,9 @@
             <div class="container">
                 <div class="row">
                     <div class="col left-navbar">
-                        <!-- <div class="userProfile">
-                            <div class="avator text-center mb-3">
-                                <img src="http://stas-melnikov.ru/cliparts/stas.jpg" alt="">
-                                
-                                <h3 class="profile__name">Stas Melnikov</h3>
-                                <span class="profile__post text-white">Member</span>
-                            </div>
-                            <div class="divider"></div>
-                        </div> -->
-
                         <ul class="nav navbar-nav">
                             <li class="nav-item">
-                                <a href="#" class="nav-link">Profile</a>
+                                <a href="#" class="nav-link" data-toggle="form" data-target="#form">Profile</a>
                             </li>
 
                             <!-- dropdown-menu -->                            
@@ -183,9 +172,55 @@
                                 <!-- Tab panes -->
                                 <div class="tab-content bg-white p-3">
                                     <div id="userInfo" class="container tab-pane active"><br>
-                                        <h3>UserInfo</h3>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                        <h3 class="text-center">UserInfo <hr></h3>  <br>
+                                        
+                                        <form>
+                                            <table>
+                                                <tr>
+                                                    <th>Name:</th>
+                                                    <td><input type="text" class="form-control" value="Stas Melnikov"></td>
+                                                </tr>
+                                                <tr>
+                                                    <th>UserName:</th>
+                                                    <td><input type="text" class="form-control" value="stas_210"></td>
+                                                </tr>
+                                                <tr>
+                                                    <th>Email:</th>
+                                                    <td><input type="email" class="form-control" value="stasMelnikov@gmail.com"></td>
+                                                </tr>
+                                                <tr>
+                                                    <th>Phone Number:</th>
+                                                    <td><input type="tel" class="form-control" value="00 123 456 789"></td>
+                                                </tr>
+                                                <tr>
+                                                    <th>Gender:</th>
+                                                    <td>
+                                                        <select class="form-control" name="Gender" id="">
+                                                            <option value="notSpecified"></option>
+                                                            <option value="male">Male</option>
+                                                            <option value="female">Female</option>
+                                                        </select>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th><h5 class="mt-4">Edit Password:</h5><hr></th>
+                                                </tr> 
+                                                <tr>
+                                                    <th><label>Old Password:</label></th>
+                                                    <td><input type="password" class="form-control"></td>
+                                                </tr>
+                                                <tr>
+                                                    <th><label>New Password:</label></th>
+                                                    <td><input type="password" class="form-control"></td>
+                                                </tr>
+                                            </table>
+
+                                            <div class="saveBtn text-center mt-3 mb-3">
+                                                <button class="btn btn-primary">Save</button>
+                                            </div>
+                                        </form>
                                     </div>
+
                                     <div id="services" class="service_list container tab-pane fade"><br>
                                         <div class="row mb-3">
                                             <div class="col">
@@ -267,6 +302,7 @@
                                             </div>
                                         </div>
                                     </div>
+
                                     <div id="reviews" class="container tab-pane fade"><br>
                                         <h3>Reviews</h3>
                                         <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
