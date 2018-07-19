@@ -323,16 +323,10 @@
     padding-left: 0.5rem;
 }
 
-.user-main-body .editCoverPhoto {
-    
-}
-
 .user-main-body .avator img:hover{
     cursor: pointer;
     background-color: #515e72;
 }
-
-
 
 /* left-navbar */
 
