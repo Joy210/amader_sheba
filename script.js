@@ -1,14 +1,14 @@
 function sign_up(){
     var inputs = document.querySelectorAll('.input_form_sign');
-  document.querySelectorAll('.ul_tabs > li')[0].className=""; 
-  document.querySelectorAll('.ul_tabs > li')[1].className="active"; 
+    document.querySelectorAll('.ul_tabs > li')[0].className=""; 
+    document.querySelectorAll('.ul_tabs > li')[1].className="active"; 
+      
+      for(var i = 0; i < inputs.length ; i++  ) {
+    if(i == 2  ){
     
-    for(var i = 0; i < inputs.length ; i++  ) {
-  if(i == 2  ){
-  
-  }else{  
-  document.querySelectorAll('.input_form_sign')[i].className = "input_form_sign d_block";
-  }
+    }else{  
+    document.querySelectorAll('.input_form_sign')[i].className = "input_form_sign d_block";
+    }
   } 
   
   setTimeout( function(){
