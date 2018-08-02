@@ -88,7 +88,8 @@
 
 .wrapper .main-content .content_2 .row {
     display: grid;
-    grid-gap: 1rem;
+    grid-gap: rem;
+    /* grid-auto-rows: minmax(200px, auto); */
     grid-template-columns: repeat(4, 1fr);   
 }
 
@@ -114,21 +115,24 @@
 
 .main-content .content_2 a {
     text-decoration: none;
-}
-
-.content_2 h4 {
     font-size: 1rem;
     font-weight: bold;
-    color: #333333;
+    color: #3862d4;
+}
+
+.main-content .content_2 a:hover {
+    color: rgb(37, 64, 153);
 }
 
 .content_2 p {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     color: lightslategray;
+    padding: 0;
+    margin: 0;
 }
 
-.content_2 h4:hover, .content_2 p:hover {
-    color: rgb(45, 80, 196);
+.content_2 .card-body {
+    padding: 0.7rem;
 }
 
 /* footer */
