@@ -1,0 +1,149 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    font-family: sans-serif;
+}
+
+.left { float: left; }
+.right { float: right; }
+.clear { clear: both; }
+.table { display: table; }
+.ls_None { list-style: none; }
+.lightGreen { background-color: #2ecc71; }
+.lightGrey { background-color: #eeeeee; }
+.shadow { box-shadow: rgba(0, 0, 0, 0.117647) 0px 1px 6px, rgba(0, 0, 0, 0.117647) 0px 1px 4px; }
+
+
+.wrapper {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: #E7EDEE;
+}
+
+.wrapper .top-container {
+    width: 100%;
+    height: 4rem;
+    margin: auto;
+    border-bottom: 4px solid #FFC107;
+}
+
+.wrapper .top-container .container {
+    width: 960px;
+    height: 100%;
+    padding: 0;
+    margin: auto;
+}
+
+.top-container .left-side {
+    float: left;
+    padding-left: 0;
+    font-size: 0.9rem;
+}
+
+.top-container .left-side .nav-link {
+    font-size: 2rem;
+}
+
+.top-container .left-side .li a {
+    padding: 0.9rem;
+}
+
+.top-container .right-side {
+    float: right;
+    padding: 0.9rem 0;
+}
+
+.top-container .right-side ul li {
+    padding: 0.1rem 0.4rem;
+    font-size: 0.9rem;
+}
+
+.top-container .right-side a,  .left-side a {
+    color: #ffffff;
+    font-size: 0.8rem;
+}
+
+.top-container .right-side .fa {
+    font-size: 1rem;
+}
+
+.top-container .right-side a:hover,  .left-side a:hover {
+    color: #2ecc71;
+}
+
+.wrapper .main-content {
+    width: 960px;
+    height: 100%;
+    padding: 0;
+    margin: auto;
+    display: table;
+}
+
+.wrapper .main-content .content_2 {
+    border-radius: 5px;
+}
+
+.wrapper .main-content .content_2 .row {
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: repeat(4, 1fr);   
+}
+
+.content_1 h4 {
+    font-weight: bold;
+    line-height: 1.6;
+}
+
+.content_1 p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: lightslategray;
+}
+
+.content_1 a.nav-link {
+    font-size: 0.9rem;
+    padding: 0.1rem;
+}
+
+.content_1 h6 {
+    font-weight: bold;
+}
+
+.main-content .content_2 a {
+    text-decoration: none;
+}
+
+.content_2 h4 {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #333333;
+}
+
+.content_2 p {
+    font-size: 0.9rem;
+    color: lightslategray;
+}
+
+.content_2 h4:hover, .content_2 p:hover {
+    color: rgb(45, 80, 196);
+}
+
+/* footer */
+
+.footer{
+	padding: 2rem 1rem;
+	color: #fff;
+    border-top: 4px solid #FFC107;
+}
+.footer p{
+	text-decoration: none;
+	color: lightslategray;
+	font-size: 0.9rem;
+	margin: 0;
+}
+.footer .fa, .footer span{
+	color: #FFC107;
+}
