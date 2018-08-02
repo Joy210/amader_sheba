@@ -4,13 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    
+    <link rel="shortcut icon" type="image/png" href="img/python.png">
     <title>UserInfo</title>
 
     <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="imageUpload.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css">
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="userProfile.js"></script>
+    <script src="imageUpload.js"></script>
     
 </head>
 <body>
@@ -76,7 +80,7 @@
         <div class="main-content mt-4 ">
             <div class="container">
                 <div class="row">
-                    <div class="col left-navbar" style="height: 80vh;">
+                    <div class="col left-navbar">
                         <ul class="nav navbar-nav">
                             <li class="nav-item">
                                 <a href="#" class="nav-link" data-toggle="form" data-target="#form">Profile</a>
@@ -112,46 +116,12 @@
 
                     <div class="user-main-body pl-2">
                         <div class="showcase">
-                            <div class="user-top-content">
-                                    <div class="editCoverPhoto p-2 left">
-                                        <button class="btn btn-outline-light btn-sm">Edit Cover Photo</button>
-                                    </div>
-        
-                                    <div class="socialLink right pt-2">
-                                        <ul class="navbar-nav navbar-expand">
-                                            <li class="nav-item">
-                                                <a href="http://facebook.com" target="_blank" class="bg-primary">
-                                                    <i class="fa fa-facebook-square"></i>
-                                                </a>
-                                            </li>
-                                            <li class="nav-item">
-                                                <a href="https://twitter.com/" target="_blank" class="bg-info">
-                                                    <i class="fa fa-twitter-square"></i>
-                                                </a>
-                                            </li>
-                                            <li class="nav-item">
-                                                <a href="https://www.instagram.com/" target="_blank" class="bg-danger">
-                                                    <i class="fa fa-instagram"></i>
-                                                </a>
-                                            </li>
-                                            <li class="nav-item">
-                                                <a href="https://bd.linkedin.com/" target="_blank" class="bg-info">
-                                                    <i class="fa fa-linkedin-square"></i>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                            </div>
-
-                            <div class="userProfile text-center">
-                                <div class="avator pt-5">
-                                    <img src="http://stas-melnikov.ru/cliparts/stas.jpg" alt="">
-                                    
-                                    <h3 class="profile__name">Stas Melnikov</h3>
-                                    <span class="profile__post text-white">Member</span>
-                                </div>
-                                <div class="divider"></div>
-                            </div>
+                            <div class="preview img-wrapper"></div>
+                            
+                            <div class="file-upload-wrapper">
+                                <input type="file" name="file" class="file-upload-native" accept="image/*" />
+                                <input type="text" disabled placeholder="upload image" class="file-upload-text" />
+                            </div> 
                         </div>
 
                         <nav class="lightGreen">
@@ -235,10 +205,9 @@
                                     </div>
 
                                     <div id="services" class="service_list container tab-pane fade"><br>
-                                        <div class="service-panel">
+                                        <div class="service-panel p-0">
                                             <div class="service-header">
-                                                <h6>Services</h6>
-                                                <hr>
+                                                <h6>Services</h6> <hr>
                                             </div>
                                             <div class="row mb-5">
                                                 <div class="col">
@@ -319,89 +288,87 @@
                                                     </a>
                                                 </div>
                                             </div>
-                                            
-                                                
                                             <!-- <button class="btn btn-outline-dark btn-sm">Show All</button> -->
+                                        </div>
+
+                                        <div class="comment-section">
+                                            <h6>Comments</h6> <hr>
+                                            <div class="input-group mb-4">
+                                                <input type="comments" class="form-control">
+                                                <button class="btn btn-primary">Comment</button>
+                                            </div>
                                         </div>
 
                                         <div class="reviewsRating mb-5">
                                             <div class="review-content">
-                                                <h6 class="">Reviews</h6> <hr>
+                                                <h6>Reviews</h6> <hr>
                                             </div>
                                             <div class="row">
                                                 <div class="col">
-                                                    <div class="userAvatar">
-                                                        <h5><span><i class="fa fa-users"></i></span> S. Rahman</h5>
-                                                    </div>
+                                                    <h6>S. rahman</h6>
                                                 </div>
-                                                <div class="col text-center">
-                                                    <div class="comment">
-                                                        <p>Lorem ipsum dolor sit amet.</p>
-                                                    </div>
-                                                </div>
-                                                <div class="col text-center">
-                                                    <span><i class="fa fa-star text-warning"></i></span>
-                                                    <span><i class="fa fa-star text-warning"></i></span>
-                                                    <span><i class="fa fa-star text-warning"></i></span>
-                                                    <span><i class="fa fa-star text-warning"></i></span>
-                                                    <span><i class="fa fa-star text-warning"></i></span>
-                                                </div>
-                                            </div>
-                                            <div class="row">
                                                 <div class="col">
-                                                    <div class="userAvatar">
-                                                        <h5><span><i class="fa fa-users"></i></span> S. Rahman</h5>
-                                                    </div>
+                                                    <p>Lorem ipsum dolor sit amet.</p>
                                                 </div>
-                                                <div class="col text-center">
-                                                    <div class="comment">
-                                                        <p>Lorem ipsum dolor sit amet.</p>
+                                                <div class="col">
+                                                    <div class="star">
+                                                        <span><i class="fa fa-star"></i></span>
+                                                        <span><i class="fa fa-star"></i></span>
+                                                        <span><i class="fa fa-star"></i></span>
+                                                        <span><i class="fa fa-star"></i></span>
+                                                        <span><i class="fa fa-star"></i></span>
                                                     </div>
-                                                </div>
-                                                <div class="col text-center">
-                                                    <span><i class="fa fa-star text-warning"></i></span>
-                                                    <span><i class="fa fa-star text-warning"></i></span>
-                                                    <span><i class="fa fa-star text-warning"></i></span>
-                                                    <span><i class="fa fa-star text-warning"></i></span>
-                                                    <span><i class="fa fa-star text-warning"></i></span>
                                                 </div>
                                             </div>
                                             <div class="row">
                                                 <div class="col">
-                                                    <div class="userAvatar">
-                                                        <h5><span><i class="fa fa-users"></i></span> S. Rahman</h5>
-                                                    </div>
+                                                    <h6>S. rahman</h6>
                                                 </div>
-                                                <div class="col text-center">
-                                                    <div class="comment">
-                                                        <p>Lorem ipsum dolor sit amet.</p>
-                                                    </div>
+                                                <div class="col">
+                                                    <p>Lorem ipsum dolor sit amet.</p>
                                                 </div>
-                                                <div class="col text-center">
-                                                    <span><i class="fa fa-star text-warning"></i></span>
-                                                    <span><i class="fa fa-star text-warning"></i></span>
-                                                    <span><i class="fa fa-star text-warning"></i></span>
-                                                    <span><i class="fa fa-star text-warning"></i></span>
-                                                    <span><i class="fa fa-star text-warning"></i></span>
+                                                <div class="col">
+                                                    <div class="star">
+                                                        <span><i class="fa fa-star"></i></span>
+                                                        <span><i class="fa fa-star"></i></span>
+                                                        <span><i class="fa fa-star"></i></span>
+                                                        <span><i class="fa fa-star"></i></span>
+                                                        <span><i class="fa fa-star"></i></span>
+                                                    </div>
                                                 </div>
                                             </div>
                                             <div class="row">
                                                 <div class="col">
-                                                    <div class="userAvatar">
-                                                        <h5><span><i class="fa fa-users"></i></span> S. Rahman</h5>
+                                                    <h6>S. rahman</h6>
+                                                </div>
+                                                <div class="col">
+                                                    <p>Lorem ipsum dolor sit amet.</p>
+                                                </div>
+                                                <div class="col">
+                                                    <div class="star">
+                                                        <span><i class="fa fa-star"></i></span>
+                                                        <span><i class="fa fa-star"></i></span>
+                                                        <span><i class="fa fa-star"></i></span>
+                                                        <span><i class="fa fa-star"></i></span>
+                                                        <span><i class="fa fa-star"></i></span>
                                                     </div>
                                                 </div>
-                                                <div class="col text-center">
-                                                    <div class="comment">
-                                                        <p>Lorem ipsum dolor sit amet.</p>
-                                                    </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col">
+                                                    <h6>S. rahman</h6>
                                                 </div>
-                                                <div class="col text-center">
-                                                    <span><i class="fa fa-star text-warning"></i></span>
-                                                    <span><i class="fa fa-star text-warning"></i></span>
-                                                    <span><i class="fa fa-star text-warning"></i></span>
-                                                    <span><i class="fa fa-star text-warning"></i></span>
-                                                    <span><i class="fa fa-star text-warning"></i></span>
+                                                <div class="col">
+                                                    <p>Lorem ipsum dolor sit amet.</p>
+                                                </div>
+                                                <div class="col">
+                                                    <div class="star">
+                                                        <span><i class="fa fa-star"></i></span>
+                                                        <span><i class="fa fa-star"></i></span>
+                                                        <span><i class="fa fa-star"></i></span>
+                                                        <span><i class="fa fa-star"></i></span>
+                                                        <span><i class="fa fa-star"></i></span>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
